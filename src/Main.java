@@ -24,13 +24,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // ===== TASK 6: Array with 3 predefined accounts =====
+        //TASK 6
         BankAccount[] arr = new BankAccount[3];
         arr[0] = new BankAccount(1, "Ali", 150000);
         arr[1] = new BankAccount(2, "Sara", 220000);
         arr[2] = new BankAccount(3, "John", 100000);
 
-        // Добавляем их в LinkedList
+
         for (BankAccount acc : arr) {
             accounts.add(acc);
         }
@@ -40,7 +40,7 @@ public class Main {
             System.out.println(acc.username + " - Balance: " + acc.balance);
         }
 
-        // ===== MAIN MENU =====
+        // MAIN MENU
         while (true) {
             System.out.println("\n=== MAIN MENU ===");
             System.out.println("1 - Enter Bank");
@@ -70,7 +70,7 @@ public class Main {
         }
     }
 
-    // ===== BANK MENU =====
+    //  BANK MENU
     static void bankMenu() {
         while (true) {
             System.out.println("\n--- BANK MENU ---");
