@@ -112,7 +112,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 1: Open account request (goes to queue) =====
+    // 1
     static void openAccountRequest() {
         System.out.print("Enter username: ");
         String name = sc.next();
@@ -122,7 +122,7 @@ public class Main {
         history.push("Account request submitted for " + name);
     }
 
-    // ===== TASK 1 & 2: Deposit =====
+    // 1 & 2:
     static void deposit() {
         System.out.print("Enter username: ");
         String name = sc.next();
@@ -148,7 +148,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 2: Withdraw =====
+    // TASK 2
     static void withdraw() {
         System.out.print("Enter username: ");
         String name = sc.next();
@@ -180,7 +180,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 3: Transaction History with Stack =====
+    // TASK 3
     static void transactionHistoryMenu() {
         while (true) {
             System.out.println("\n--- TRANSACTION HISTORY (Stack) ---");
@@ -244,7 +244,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 4: Bill Payment Queue =====
+    //4
     static void addBillPayment() {
         System.out.print("Enter bill description (e.g., Electricity Bill): ");
         sc.nextLine(); // consume newline
@@ -282,7 +282,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 1: Display all accounts =====
+    // TASK 1
     static void displayAllAccounts() {
         if (accounts.isEmpty()) {
             System.out.println("❌ No accounts found!");
@@ -295,7 +295,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 5: Search account by username =====
+    // TASK 5
     static BankAccount findAccount(String username) {
         for (BankAccount acc : accounts) {
             if (acc.username.equalsIgnoreCase(username)) {
@@ -305,7 +305,7 @@ public class Main {
         return null;
     }
 
-    // ===== ATM MENU =====
+    // MENU
     static void atmMenu() {
         while (true) {
             System.out.println("\n--- ATM MENU ---");
@@ -341,7 +341,7 @@ public class Main {
         }
     }
 
-    // ===== ADMIN MENU =====
+    // ADMIN MENU
     static void adminMenu() {
         while (true) {
             System.out.println("\n--- ADMIN AREA ---");
@@ -379,7 +379,7 @@ public class Main {
         }
     }
 
-    // ===== TASK 5: Process account queue =====
+    //  5
     static void processAccountRequest() {
         if (requests.isEmpty()) {
             System.out.println("❌ No pending account requests!");
