@@ -18,7 +18,7 @@ public class Main {
     static Stack<String> history = new Stack<>();
     static Queue<String> billQueue = new LinkedList<>();
     static Queue<BankAccount> requests = new LinkedList<>();
-    static int nextAccountId = 4; // для уникальных ID (после 3 предустановленных)
+    static int nextAccountId = 4; //
 
     static Scanner sc = new Scanner(System.in);
 
@@ -130,7 +130,7 @@ public class Main {
         BankAccount acc = findAccount(name);
 
         if (acc == null) {
-            System.out.println("❌ Account not found!");
+            System.out.println(" Account not found!");
             return;
         }
 
@@ -144,7 +144,7 @@ public class Main {
             System.out.println("✓ Deposit successful!");
             System.out.println("New balance for " + name + ": " + acc.balance);
         } else {
-            System.out.println("❌ Invalid amount!");
+            System.out.println("Invalid amount!");
         }
     }
 
@@ -156,7 +156,7 @@ public class Main {
         BankAccount acc = findAccount(name);
 
         if (acc == null) {
-            System.out.println("❌ Account not found!");
+            System.out.println(" Account not found!");
             return;
         }
 
@@ -174,9 +174,9 @@ public class Main {
             System.out.println("✓ Withdrawal successful!");
             System.out.println("New balance for " + acc.username + ": " + acc.balance);
         } else if (amount <= 0) {
-            System.out.println("❌ Invalid amount!");
+            System.out.println("Invalid amount!");
         } else {
-            System.out.println("❌ Insufficient balance! Available: " + acc.balance);
+            System.out.println(" Insufficient balance! Available: " + acc.balance);
         }
     }
 
@@ -216,7 +216,7 @@ public class Main {
 
     static void undoLastTransaction() {
         if (history.isEmpty()) {
-            System.out.println("❌ No transactions to undo!");
+            System.out.println(" No transactions to undo!");
             return;
         }
         String removed = history.pop();
@@ -226,7 +226,7 @@ public class Main {
 
     static void peekLastTransaction() {
         if (history.isEmpty()) {
-            System.out.println("❌ No transactions found!");
+            System.out.println("No transactions found!");
             return;
         }
         System.out.println("📜 Last transaction: " + history.peek());
@@ -234,7 +234,7 @@ public class Main {
 
     static void showAllTransactions() {
         if (history.isEmpty()) {
-            System.out.println("❌ No transaction history!");
+            System.out.println(" No transaction history!");
             return;
         }
         System.out.println("\n=== TRANSACTION HISTORY ===");
@@ -256,7 +256,7 @@ public class Main {
 
     static void processNextBill() {
         if (billQueue.isEmpty()) {
-            System.out.println("❌ No bills to process!");
+            System.out.println(" No bills to process!");
             return;
         }
         String bill = billQueue.poll();
@@ -285,7 +285,7 @@ public class Main {
     // TASK 1
     static void displayAllAccounts() {
         if (accounts.isEmpty()) {
-            System.out.println("❌ No accounts found!");
+            System.out.println(" No accounts found!");
             return;
         }
         System.out.println("\n=== ALL BANK ACCOUNTS ===");
@@ -324,7 +324,7 @@ public class Main {
             BankAccount acc = findAccount(name);
 
             if (acc == null) {
-                System.out.println("❌ Account not found!");
+                System.out.println(" Account not found!");
                 continue;
             }
 
@@ -382,7 +382,7 @@ public class Main {
     //  5
     static void processAccountRequest() {
         if (requests.isEmpty()) {
-            System.out.println("❌ No pending account requests!");
+            System.out.println(" No pending account requests!");
             return;
         }
         BankAccount newAcc = requests.poll();
