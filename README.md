@@ -1,24 +1,105 @@
-In this project, I created a simple banking system in Java using different data structures. I used a LinkedList to store bank accounts, a Stack to keep transaction history, and Queues to manage bill payments and account requests. I also used an Array to store predefined accounts.
+# Assignment 3: Sorting and Searching Algorithm Analysis System
+IT-2501 YERMEK DINMUKHAMBET
+## Project Overview
 
-The program allows users to deposit and withdraw money, check balance, submit account requests, and view transaction history. There are separate menus for Bank, ATM, and Admin, which simulate real banking operations.
+This project analyzes and compares the performance of sorting and searching algorithms in Java.
 
-Overall, this project helped me understand how data structures work in real-life applications.
+Selected algorithms:
+
+* Basic Sorting: Bubble Sort
+* Advanced Sorting: Quick Sort
+* Searching: Binary Search
+
+The goal is to measure execution time and understand how algorithm efficiency changes depending on input size and data type.
+
+---
+
+## Algorithm Descriptions
+
+### Bubble Sort
+
+Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order.
+
+**Time Complexity:**
+
+* Best: O(n)
+* Average: O(n²)
+* Worst: O(n²)
+
+---
+
+### Quick Sort
+
+Quick Sort selects a pivot element and partitions the array into smaller and larger elements, then recursively sorts them.
+
+**Time Complexity:**
+
+* Best: O(n log n)
+* Average: O(n log n)
+* Worst: O(n²)
+
+---
+
+### Binary Search
+
+Binary Search works only on sorted arrays by repeatedly dividing the search range in half.
+
+**Time Complexity:**
+
+* Best: O(1)
+* Average/Worst: O(log n)
+
+---
 
 
-Task 1 – LinkedList: Created BankAccount class (accountNumber, username, balance). Used LinkedList to store accounts. Implemented: add account, display all accounts, search by username.
+*(Replace "..." with your actual results from the program)*
 
-Task 2 – Deposit/Withdraw: Added deposit and withdraw methods with balance updates.
+---
 
-Task 3 – Stack (LIFO): Created Stack<String> for transaction history. Implemented: add transaction, undo last transaction (pop), display last transaction (peek).
+## Analysis
 
-Task 4 – Queue (FIFO): Created billQueue for bill payments. Implemented: add bill, process next bill, display queue.
+### Which sorting algorithm performed faster? Why?
 
-Task 5 – Account Opening Queue: Created queue for account requests. User submits request → Admin processes → account added to LinkedList.
+Quick Sort performed faster than Bubble Sort because it has a better time complexity (O(n log n) vs O(n²)).
 
-Task 6 – Array: Created BankAccount[3] with three predefined accounts (Ali, Sara, John) and displayed them.
+### How does performance change with input size?
 
-Mini Banking Menu: Integrated all structures into one menu: Bank Menu (requests, deposit, withdraw, history, bills), ATM Menu (balance, withdraw), Admin Menu (process requests, bill queue).
+As the array size increases, Bubble Sort becomes significantly slower, while Quick Sort scales much better.
 
-Issues Solved: Scanner bug fixed with sc.nextLine(), account ID conflict fixed with counter, "class Main is public" error fixed by removing public.
+### How does sorted vs unsorted data affect performance?
 
-Result: All 6 tasks and the mini banking menu work correctly. The program uses LinkedList, Stack, Queue, and Array as required.
+Bubble Sort performs faster on sorted arrays because it can stop early. Quick Sort performance is less affected.
+
+### Do the results match the expected Big-O complexity?
+
+Yes, the results generally match theoretical expectations.
+
+### Which searching algorithm is more efficient? Why?
+
+Binary Search is more efficient because it reduces the search space by half each step.
+
+### Why does Binary Search require a sorted array?
+
+Because it relies on comparing the middle element to decide the search direction.
+
+---
+
+## Screenshots
+
+Add screenshots of your program output here:
+
+![Output](docs/screenshots/output1.png)
+
+---
+
+## Reflection
+
+This project helped me understand how different algorithms perform in practice. Bubble Sort is easy to implement but inefficient for large datasets, while Quick Sort is much faster and more scalable.
+
+I also learned how important sorted data is for Binary Search. One of the challenges was correctly measuring execution time and organizing the code into multiple classes.
+
+---
+
+## Conclusion
+
+The experiment confirmed that algorithm efficiency depends heavily on input size and structure. Advanced algorithms like Quick Sort significantly outperform basic ones on larger datasets.
