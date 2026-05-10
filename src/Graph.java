@@ -17,8 +17,7 @@ public class Graph {
 
         adjacencyList.get(from).add(to);
 
-        // For undirected graph, also add this:
-        // adjacencyList.get(to).add(from);
+
     }
 
     public void printGraph() {
